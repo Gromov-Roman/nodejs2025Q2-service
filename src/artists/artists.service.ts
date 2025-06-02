@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { randomUUID } from 'crypto';
-import { Artist } from '@interfaces/index';
+import { Artist } from '@interfaces';
 import { CreateArtistDto } from '@dto/create-artist.dto';
 
 @Injectable()

@@ -4,7 +4,7 @@ import {
   ForbiddenException,
 } from '@nestjs/common';
 import { randomUUID } from 'crypto';
-import { User, UserResponse } from '@interfaces/index';
+import { User, UserResponse } from '@interfaces';
 import { CreateUserDto } from '@dto/create-user.dto';
 import { UpdatePasswordDto } from '@dto/update-password.dto';
 

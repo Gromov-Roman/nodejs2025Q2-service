@@ -20,6 +20,7 @@
     "paths": {
         "@dto/*": ["src/common/dto/*"],
         "@utils/*": ["src/common/utils/*"],
+        "@interfaces": ["src/common/interfaces"],
         "@interfaces/*": ["src/common/interfaces/*"],
     }
   }
