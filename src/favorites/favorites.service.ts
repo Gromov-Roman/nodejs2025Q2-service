@@ -1,12 +1,14 @@
 import {
+  forwardRef,
+  Inject,
   Injectable,
   NotFoundException,
   UnprocessableEntityException,
 } from '@nestjs/common';
 import { Favorites, FavoritesResponse } from '@interfaces';
-import { ArtistsService } from '../artists/artists.service';
-import { AlbumsService } from '../albums/albums.service';
-import { TracksService } from '../tracks/tracks.service';
+import { ArtistsService } from '@artists/artists.service';
+import { AlbumsService } from '@albums/albums.service';
+import { TracksService } from '@tracks/tracks.service';
 
 @Injectable()
 export class FavoritesService {
@@ -17,8 +19,11 @@ export class FavoritesService {
   };
 
   constructor(
+    @Inject(forwardRef(() => ArtistsService))
     private readonly artistsService: ArtistsService,
+    @Inject(forwardRef(() => AlbumsService))
     private readonly albumsService: AlbumsService,
+    @Inject(forwardRef(() => TracksService))
     private readonly tracksService: TracksService,
   ) {}
 
