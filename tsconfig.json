@@ -16,6 +16,16 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+        "@dto/*": ["src/common/dto/*"],
+        "@utils/*": ["src/common/utils/*"],
+        "@interfaces": ["src/common/interfaces"],
+        "@albums/*": ["src/albums/*"],
+        "@artists/*": ["src/artists/*"],
+        "@favorites/*": ["src/favorites/*"],
+        "@tracks/*": ["src/tracks/*"],
+        "@users/*": ["src/users/*"],
+    }
   }
 }
